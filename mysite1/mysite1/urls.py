@@ -23,5 +23,6 @@ urlpatterns = [
     # uska naam taki bada sa endpoint ho toh usse bulla sake
     path("admin/", admin.site.urls),
     path("", views.index, name="index"),#kuch nahi str me toh home page hota he
-    path("about",views.about, name="about")
+    path("rmpunc/",views.rm_punctua,name="RM_PUNC"),
+    path("capitalise/",views.capital,name="capital"),
 ]

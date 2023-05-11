@@ -22,6 +22,6 @@ urlpatterns = [
     #first argument is he url ke baad kya end point he ,  function which need to be run when someone visit your that endpoint,
     # uska naam taki bada sa endpoint ho toh usse bulla sake
     path("admin/", admin.site.urls),
-    path("", views.index, name="index"),#
+    path("", views.index, name="index"),#kuch nahi str me toh home page hota he
     path("about",views.about, name="about")
 ]

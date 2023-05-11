@@ -6,6 +6,7 @@ html_string=""
 with open('mysite1/execise1.html', 'r') as f:
     html_string+=(f.read())
 
+#print(html_string)
 def index(request): # ye index takes an argument by default which is request
     return HttpResponse(html_string) # using an html here
 

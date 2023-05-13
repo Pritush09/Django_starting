@@ -25,7 +25,8 @@ with open('mysite1/backbutton.html', 'r') as f:
     html_string+=(f.read())
 
 def index(request):
-    return render(request,'index.html')
+    params = {"name":"Pritush","Place":"Out of the world"}
+    return render(request,'index.html',params)
 # this uses the html file named index in the index folder which is being displayed in the web this is the easier way to manage the pages
 
 def rm_punctua(request):

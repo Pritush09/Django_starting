@@ -25,6 +25,11 @@ def index(request):
 # this uses the html file named index in the index folder which is being displayed in the web this is the easier way to manage the pages
 
 def rm_punctua(request):
+    #get the text
+    djtext = request.GET.get('text',"default") # text he toh lelo varna toh default lelo
+
+    # analyze the text
+
     return HttpResponse("""<a href='/'>back</a>""")
 
 def capital(response):

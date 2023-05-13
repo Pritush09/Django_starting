@@ -15,11 +15,28 @@ def about(request): # koi bhi function not only the index takes an argument by d
     return HttpResponse("about hello")
 """# this is the exercise1 code
 
+
+"""Back button is made by <a herf='/'>back</a> this a tag"""
+
+#adding an back button
+html_string=""
+with open('mysite1/backbutton.html', 'r') as f:
+    html_string+=(f.read())
+
 def index(request):
-    return HttpResponse("HOME")
+    return HttpResponse(html_string)
 
 def rm_punctua(request):
-    return HttpResponse("Remove Punctuation")
+    return HttpResponse(html_string)
 
 def capital(response):
-    return HttpResponse("Capitalise")
+    return HttpResponse(html_string)
+
+def newline_remove_first(response):
+    return HttpResponse(html_string)
+
+def space_remover(response):
+    return HttpResponse(html_string)
+
+def charcount(response):
+    return HttpResponse(html_string)

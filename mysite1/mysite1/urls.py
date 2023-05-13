@@ -25,4 +25,7 @@ urlpatterns = [
     path("", views.index, name="index"),#kuch nahi str me toh home page hota he
     path("rmpunc/",views.rm_punctua,name="RM_PUNC"),
     path("capitalise/",views.capital,name="capital"),
+    path("newline_remove_first/",views.newline_remove_first,name="newline_remove_first"),
+    path("space_remover/",views.space_remover,name="space_remover"),
+    path("charcount/",views.charcount,name="charcount"),
 ]

@@ -54,7 +54,8 @@ ROOT_URLCONF = "mysite1.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        # we create a template folder where there is manage.py
+        "DIRS": ["templates"],# this tells django that there is a template file in which we are adding a tamplates for our web
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

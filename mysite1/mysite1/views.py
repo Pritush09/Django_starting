@@ -2,6 +2,7 @@
 """we have to give an http response becz the views retuens an http response"""
 
 from django.http import HttpResponse
+from django.shortcuts import render
 
 """html_string=""
 with open('mysite1/execise1.html', 'r') as f:
@@ -24,7 +25,8 @@ with open('mysite1/backbutton.html', 'r') as f:
     html_string+=(f.read())
 
 def index(request):
-    return HttpResponse(html_string)
+    return render(request,'index.html')
+# this uses the html file named index in the index folder which is being displayed in the web this is the easier way to manage the pages
 
 def rm_punctua(request):
     return HttpResponse(html_string)

@@ -1,9 +1,9 @@
 # my creation
 """we have to give an http response becz the views retuens an http response"""
 
-from django.http import HttpResponse
+#from django.http import HttpResponse
 from django.shortcuts import render
-
+import string
 """html_string=""
 with open('mysite1/execise1.html', 'r') as f:
     html_string+=(f.read())
@@ -27,12 +27,20 @@ def index(request):
 def Analyze(request):
     #get the text
     djtext = request.GET.get('text',"default") # text he toh lelo varna toh default lelo
-    removepunc = request.GET.get("rmvpunc",'off')
+    removepunc = request.GET.get("removepunc",'off')
+    print(removepunc)
+    splitedtext = djtext.split()
+    if removepunc == "on":
+        analyze = "".join([a for a in djtext if a not in string.punctuation])
 
+        param = {"purpose": "Removed Punctuation", "analyzed_text": analyze}
 
-    # analyze the text
+        # analyze the text
 
-    return render(request, 'Analyze.html')
+        return render(request, 'Analyze.html', param)
+
+    param = {"purpose": "Removed Punctuation", "analyzed_text": djtext}
+    return render(request, 'Analyze.html',param)
 
 """def capital(response):
     return HttpResponse("<a href='/'> back </a>")

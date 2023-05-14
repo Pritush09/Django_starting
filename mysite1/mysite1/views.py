@@ -24,15 +24,17 @@ def index(request):
     return render(request,'index.html')
 # this uses the html file named index in the index folder which is being displayed in the web this is the easier way to manage the pages
 
-def rm_punctua(request):
+def Analyze(request):
     #get the text
     djtext = request.GET.get('text',"default") # text he toh lelo varna toh default lelo
+    removepunc = request.GET.get("rmvpunc",'off')
+
 
     # analyze the text
 
-    return HttpResponse("""<a href='/'>back</a>""")
+    return render(request, 'Analyze.html')
 
-def capital(response):
+"""def capital(response):
     return HttpResponse("<a href='/'> back </a>")
 
 def newline_remove_first(response):
@@ -42,4 +44,4 @@ def space_remover(response):
     return HttpResponse("<a href='/'>back</a>")
 
 def charcount(response):
-    return HttpResponse("<a href='/'>back</a>")
+    return HttpResponse("<a href='/'>back</a>")"""
